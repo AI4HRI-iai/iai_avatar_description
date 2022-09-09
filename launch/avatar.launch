@@ -1,0 +1,27 @@
+<launch>
+
+    <arg name="model" default="$(find iai_avatar_description)/avatars/MetaHuman/urdf/avatar.urdf"/>
+
+    <arg name="gui" default="true"/>
+    <arg name="rvizconfig" default="$(find iai_avatar_description)/launch/rviz/config.rviz"/>
+
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model)"/>
+    <param name="use_gui" value="$(arg gui)"/>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find iai_avatar_description)/launch/rviz/config.rviz"
+          required="true"/>
+
+    <rosparam command="load" file="$(find avatar_ros_config)/config/ros_control_sim.yaml"/>
+
+
+    <arg name="use_gui" default="true" doc="Should the joint_state_publisher use a GUI for controlling joint states"/>
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" output="screen"
+          unless="$(arg use_gui)"/>
+    <node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher_gui"
+          output="screen" if="$(arg use_gui)"/>
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+
+</launch>
+
