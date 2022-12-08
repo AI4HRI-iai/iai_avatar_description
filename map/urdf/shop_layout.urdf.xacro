@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="shop_environment">
+    
+        <link name="shop_layout">
+            <visual>
+                <geometry>
+                    <mesh filename="package://iai_avatar_description/map/meshes/shop.obj"/>
+                </geometry>
+            </visual>
+        </link>
+        
+        <link name="NikonStand">
+            <visual>
+                <geometry>
+                    <mesh filename="package://iai_avatar_description/map/meshes/stand.obj"/>
+                </geometry>
+            </visual>
+        </link>
+        
+        <link name="NikonCamera">
+            <visual>
+                <geometry>
+                    <box size="0.25 0.25 0.25"/>
+                </geometry>
+            </visual>
+        </link>
+        
+        <link name="SonyStand">
+            <visual>
+                <geometry>
+                    <mesh filename="package://iai_avatar_description/map/meshes/stand.obj"/>
+                </geometry>
+            </visual>
+        </link>
+        
+        <link name="SonyCamera">
+            <visual>
+                <geometry>
+                    <box size="0.25 0.25 0.25"/>
+                </geometry>
+            </visual>
+        </link>
+        
+        <link name="CanonStand">
+            <visual>
+                <geometry>
+                    <mesh filename="package://iai_avatar_description/map/meshes/stand.obj"/>
+                </geometry>
+            </visual>
+        </link>
+        
+         <link name="CanonCamera">
+            <visual>
+                <geometry>
+                    <box size="0.25 0.25 0.25"/>
+                </geometry>
+            </visual>
+        </link>
+        
+        <link name="ServiceCounter">
+            <visual>
+                <geometry>
+                    <mesh filename="package://iai_avatar_description/map/meshes/stand.obj"/>
+                </geometry>
+            </visual>
+        </link>
+        
+           <joint name="ServiceCounter" type="fixed">
+    <parent link="shop_layout"/>
+    <child link="ServiceCounter"/>
+  </joint>
+        
+        <joint name="SonyStand" type="fixed">
+    <parent link="shop_layout"/>
+    <child link="SonyStand"/>
+  </joint>
+        
+        <joint name="NikonStand" type="fixed">
+    <parent link="shop_layout"/>
+    <child link="NikonStand"/>
+  </joint>
+  
+  <joint name="shop_layout_to_CanonStand" type="fixed">
+    <parent link="shop_layout"/>
+    <child link="CanonStand"/>
+  </joint>
+  
+  <joint name="SonyCamera" type="fixed">
+    <parent link="SonyStand"/>
+    <child link="SonyCamera"/>
+  </joint>
+  
+      <joint name="NikonCamera" type="fixed">
+    <parent link="NikonStand"/>
+    <child link="NikonCamera"/>
+  </joint>
+    
+        <joint name="CanonCamera" type="fixed">
+    <parent link="CanonStand"/>
+    <child link="CanonCamera"/>
+  </joint>
+  
+        
+
+</robot>
