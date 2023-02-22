@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="avatar">
+ 
+    <xacro:arg name="prefix" default="" />
+	
+    <xacro:property name="avatar_prefix"
+                    value="$(arg prefix)"/>
+
+    <xacro:property name="mesh_folder"
+                    value="package://iai_avatar_description/avatars/MetaHuman/meshes/fbx"/>
+
+    <xacro:macro name="default_inertial" params="mass">
+        <inertial>
+            <mass value="${mass}"/>
+            <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </xacro:macro>
+
+
+    <xacro:macro name="mesh_coll" params="bpart">
+        <visual>
+            <geometry>
+                <mesh filename="${mesh_folder}/${bpart}.fbx" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="${mesh_folder}/${bpart}.fbx" />
+            </geometry>
+        </collision>
+    </xacro:macro>
+
+
+    <xacro:macro name="yaw_pitch_joints" params="linkname mass">
+        <link name="${avatar_prefix}${linkname}_yaw">
+            <xacro:default_inertial mass="${mass}"/>
+        </link>
+
+        <link name="${avatar_prefix}${linkname}_pitch">
+            <xacro:default_inertial mass="${mass}"/>
+        </link>
+    </xacro:macro>
+
+    <link name="${avatar_prefix}root"/>
+
+    <link name="${avatar_prefix}pelvis">
+        <xacro:mesh_coll bpart="pelvis"/>
+        <xacro:default_inertial mass="8.36"/>
+    </link>
+
+    <xacro:yaw_pitch_joints linkname="pelvis" mass="8.36"/>
+
+    <link name="${avatar_prefix}spine_01">
+        <xacro:default_inertial mass="2.34"/>
+    </link>
+
+    <link name="${avatar_prefix}spine_02">
+        <xacro:default_inertial mass="3.34"/>
+    </link>
+
+    <link name="${avatar_prefix}spine_03">
+        <xacro:default_inertial mass="4.43"/>
+    </link>
+
+    <link name="${avatar_prefix}spine_04">
+        <xacro:mesh_coll bpart="torso"/>
+        <xacro:default_inertial mass="5.43"/>
+    </link>
+
+    <xacro:yaw_pitch_joints linkname="spine_04" mass="5.43"/>
+
+    <link name="${avatar_prefix}spine_05">
+        <xacro:default_inertial mass="6.05"/>
+    </link>
+
+
+    <link name="${avatar_prefix}neck_01">
+        <xacro:default_inertial mass="1.39"/>
+    </link>
+
+
+    <link name="${avatar_prefix}neck_02">
+        <xacro:default_inertial mass="1.34"/>
+    </link>
+
+
+    <link name="${avatar_prefix}head">
+        <xacro:mesh_coll bpart="head"/>
+        <xacro:default_inertial mass="3.34"/>
+    </link>
+
+    <xacro:yaw_pitch_joints linkname="head" mass="3.34"/>
+
+
+    <link name="${avatar_prefix}clavicle_l">
+        <xacro:default_inertial mass="2.08"/>
+    </link>
+
+    <link name="${avatar_prefix}upperarm_l">
+        <xacro:mesh_coll bpart="upperarm_l"/>
+        <xacro:default_inertial mass="1.75"/>
+    </link>
+
+    <xacro:yaw_pitch_joints linkname="upperarm_l" mass="1.75"/>
+
+    <link name="${avatar_prefix}lowerarm_l">
+        <xacro:mesh_coll bpart="lowerarm_l"/>
+        <xacro:default_inertial mass="1.39"/>
+    </link>
+
+    <xacro:yaw_pitch_joints linkname="lowerarm_l" mass="1.39"/>
+
+    <link name="${avatar_prefix}hand_l">
+        <xacro:mesh_coll bpart="hand_l"/>
+        <xacro:default_inertial mass="1.56"/>
+    </link>
+
+    <xacro:yaw_pitch_joints linkname="hand_l" mass="1.56"/>
+    
+    <link name="${avatar_prefix}clavicle_r">
+        <xacro:default_inertial mass="2.09"/>
+    </link>
+
+
+    <link name="${avatar_prefix}upperarm_r">
+        <xacro:mesh_coll bpart="upperarm_r"/>
+        <xacro:default_inertial mass="1.75"/>
+    </link>
+
+    <xacro:yaw_pitch_joints linkname="upperarm_r" mass="1.75"/>
+
+    <link name="${avatar_prefix}lowerarm_r">
+        <xacro:mesh_coll bpart="lowerarm_r"/>
+        <xacro:default_inertial mass="1.39"/>
+    </link>
+
+    <xacro:yaw_pitch_joints linkname="lowerarm_r" mass="1.39"/>
+
+    <link name="${avatar_prefix}hand_r">
+        <xacro:mesh_coll bpart="hand_r"/>
+        <xacro:default_inertial mass="1.15"/>
+    </link>
+
+    <xacro:yaw_pitch_joints linkname="hand_r" mass="1.15"/>
+
+    <link name="${avatar_prefix}thigh_l">
+        <xacro:mesh_coll bpart="thigh_l"/>
+        <xacro:default_inertial mass="5.50"/>
+    </link>
+
+    <link name="${avatar_prefix}calf_l">
+        <xacro:mesh_coll bpart="calf_l"/>
+        <xacro:default_inertial mass="3.37"/>
+    </link>
+
+    <link name="${avatar_prefix}foot_l">
+        <xacro:mesh_coll bpart="foot_l"/>
+        <xacro:default_inertial mass="1.12"/>
+    </link>
+
+    <link name="${avatar_prefix}thigh_r">
+        <xacro:mesh_coll bpart="thigh_r"/>
+        <xacro:default_inertial mass="5.50"/>
+    </link>
+
+    <link name="${avatar_prefix}calf_r">
+        <xacro:mesh_coll bpart="calf_r"/>
+        <xacro:default_inertial mass="3.37"/>
+    </link>
+
+    <link name="${avatar_prefix}foot_r">
+        <xacro:mesh_coll bpart="foot_r"/>
+        <xacro:default_inertial mass="1.12"/>
+    </link>
+
+
+    <joint name="${avatar_prefix}root_to_${avatar_prefix}pelvis_yaw" type="fixed">
+        <parent link="${avatar_prefix}root"/>
+        <child link="${avatar_prefix}pelvis_yaw"/>
+        <origin rpy="1.5708 -1.5708 0" xyz="0 0 0.8854"/>
+        <!--origin rpy="0 -1.5708 0" xyz="0 0 0.8854"/-->
+    </joint>
+    
+    <joint name="${avatar_prefix}pelvis_yaw_to_${avatar_prefix}pelvis_pitch" type="revolute">
+        <parent link="${avatar_prefix}pelvis_yaw"/>
+        <child link="${avatar_prefix}pelvis_pitch"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}pelvis_pitch_to_${avatar_prefix}pelvis" type="revolute">
+        <parent link="${avatar_prefix}pelvis_pitch"/>
+        <child link="${avatar_prefix}pelvis"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}pelvis_to_${avatar_prefix}spine_01_yaw" type="revolute">
+        <parent link="${avatar_prefix}pelvis"/>
+        <child link="${avatar_prefix}spine_01"/>
+        <limit effort="1" lower="0" upper="0" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0.02031170 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    
+    <joint name="${avatar_prefix}spine_01_to_${avatar_prefix}spine_02" type="continuous">
+        <parent link="${avatar_prefix}spine_01"/>
+        <child link="${avatar_prefix}spine_02"/>
+        <dynamics damping="1.0" friction="0.0001"/>
+        <origin rpy="0 0 0" xyz="0.042 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}spine_02_to_${avatar_prefix}spine_03" type="revolute">
+        <parent link="${avatar_prefix}spine_02"/>
+        <child link="${avatar_prefix}spine_03"/>
+        <limit effort="1" lower="0" upper="0" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0.067 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}spine_03_to_${avatar_prefix}spine_04_yaw" type="revolute">
+        <parent link="${avatar_prefix}spine_03"/>
+        <child link="${avatar_prefix}spine_04_yaw"/>
+        <limit effort="1" lower="0" upper="0" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0.07891 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    
+    <joint name="${avatar_prefix}spine_04_yaw_to_${avatar_prefix}spine_04_pitch" type="revolute">
+        <parent link="${avatar_prefix}spine_04_yaw"/>
+        <child link="${avatar_prefix}spine_04_pitch"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}spine_04_pitch_to_${avatar_prefix}spine_04" type="revolute">
+        <parent link="${avatar_prefix}spine_04_pitch"/>
+        <child link="${avatar_prefix}spine_04"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    
+    <joint name="${avatar_prefix}spine_04_to_${avatar_prefix}spine_05" type="continuous">
+        <parent link="${avatar_prefix}spine_04"/>
+        <child link="${avatar_prefix}spine_05"/>
+        <dynamics damping="1.0" friction="0.0001"/>
+        <origin rpy="0 0 0" xyz="0.15038425 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    
+    <joint name="${avatar_prefix}spine_05_to_${avatar_prefix}neck_01" type="revolute">
+        <parent link="${avatar_prefix}spine_05"/>
+        <child link="${avatar_prefix}neck_01"/>
+        <dynamics damping="1.0" friction="0.0001"/>
+        <limit effort="1" lower="-1.22173" upper="1.22173" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0.1062 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    
+    <joint name="${avatar_prefix}neck_01_to_${avatar_prefix}neck_02" type="revolute">
+        <parent link="${avatar_prefix}neck_01"/>
+        <child link="${avatar_prefix}neck_02"/>
+        <dynamics damping="1.0" friction="0.0001"/>
+        <limit effort="1" lower="-1.5708" upper="0.959931" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0.05316546 0 0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+    
+    <joint name="${avatar_prefix}neck_02_to_${avatar_prefix}head_yaw" type="revolute">
+        <parent link="${avatar_prefix}neck_02"/>
+        <child link="${avatar_prefix}head_yaw"/>
+        <dynamics damping="1.0" friction="0.0001"/>
+        <limit effort="1" lower="-0.610865" upper="0.610865" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0.05279524 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}head_yaw_to_${avatar_prefix}head_pitch" type="revolute">
+        <parent link="${avatar_prefix}head_yaw"/>
+        <child link="${avatar_prefix}head_pitch"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}head_pitch_to_${avatar_prefix}head" type="revolute">
+        <parent link="${avatar_prefix}head_pitch"/>
+        <child link="${avatar_prefix}head"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    
+    <joint name="${avatar_prefix}spine_05_to_${avatar_prefix}clavicle_l" type="revolute">
+        <parent link="${avatar_prefix}spine_05"/>
+        <child link="${avatar_prefix}clavicle_l"/>
+        <origin rpy="0 1.5708 0" xyz="0.05142808 0.00883206 -0.00816548"/>
+        <dynamics damping="1.0" friction="0.0001"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    
+    <joint name="${avatar_prefix}clavicle_l_to_${avatar_prefix}upperarm_l_yaw" type="revolute">
+        <parent link="${avatar_prefix}clavicle_l"/>
+        <child link="${avatar_prefix}upperarm_l_yaw"/>
+        <dynamics damping="1.0" friction="0.0001"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 1.0471975511965976 0" xyz="0.13340044 0 0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="${avatar_prefix}upperarm_l_yaw_to_${avatar_prefix}upperarm_l_pitch" type="revolute">
+        <parent link="${avatar_prefix}upperarm_l_yaw"/>
+        <child link="${avatar_prefix}upperarm_l_pitch"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}upperarm_l_pitch_to_${avatar_prefix}upperarm_l" type="revolute">
+        <parent link="${avatar_prefix}upperarm_l_pitch"/>
+        <child link="${avatar_prefix}upperarm_l"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    
+    <joint name="${avatar_prefix}upperarm_l_to_${avatar_prefix}lowerarm_l_yaw" type="continuous">
+        <parent link="${avatar_prefix}upperarm_l"/>
+        <child link="${avatar_prefix}lowerarm_l_yaw"/>
+        <origin rpy="0 0 0" xyz="0.238537997 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}lowerarm_l_yaw_to_${avatar_prefix}lowerarm_l_pitch" type="revolute">
+        <parent link="${avatar_prefix}lowerarm_l_yaw"/>
+        <child link="${avatar_prefix}lowerarm_l_pitch"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}lowerarm_l_pitch_to_${avatar_prefix}lowerarm_l" type="revolute">
+        <parent link="${avatar_prefix}lowerarm_l_pitch"/>
+        <child link="${avatar_prefix}lowerarm_l"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}lowerarm_l_to_${avatar_prefix}hand_l_yaw" type="continuous">
+        <parent link="${avatar_prefix}lowerarm_l"/>
+        <child link="${avatar_prefix}hand_l_yaw"/>
+        <dynamics damping="1.0" friction="0.0001"/>
+        <origin rpy="-1.2351 0.1883 -0.2033" xyz="0.22966 0 -0.0000001"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}hand_l_yaw_to_${avatar_prefix}hand_l_pitch" type="revolute">
+        <parent link="${avatar_prefix}hand_l_yaw"/>
+        <child link="${avatar_prefix}hand_l_pitch"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}hand_l_pitch_to_${avatar_prefix}hand_l" type="revolute">
+        <parent link="${avatar_prefix}hand_l_pitch"/>
+        <child link="${avatar_prefix}hand_l"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}spine_05_to_${avatar_prefix}clavicle_r" type="continuous">
+        <parent link="${avatar_prefix}spine_05"/>
+        <child link="${avatar_prefix}clavicle_r"/>
+        <dynamics damping="1.0" friction="0.0001"/>
+        <origin rpy="3.14159 1.5708 0" xyz="0.05142808 0.00883206 0.00816548"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}clavicle_r_to_${avatar_prefix}upperarm_r_yaw" type="continuous">
+        <parent link="${avatar_prefix}clavicle_r"/>
+        <child link="${avatar_prefix}upperarm_r_yaw"/>
+        <dynamics damping="1.0" friction="0.0001"/>
+        <origin rpy="0 1.0471975511965976 0" xyz="-0.13340 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}upperarm_r_yaw_to_${avatar_prefix}upperarm_r_pitch" type="revolute">
+        <parent link="${avatar_prefix}upperarm_r_yaw"/>
+        <child link="${avatar_prefix}upperarm_r_pitch"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}upperarm_r_pitch_to_${avatar_prefix}upperarm_r" type="revolute">
+        <parent link="${avatar_prefix}upperarm_r_pitch"/>
+        <child link="${avatar_prefix}upperarm_r"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    
+    <joint name="${avatar_prefix}upperarm_r_to_${avatar_prefix}lowerarm_r_yaw" type="revolute">
+        <parent link="${avatar_prefix}upperarm_r"/>
+        <child link="${avatar_prefix}lowerarm_r_yaw"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1000.0" lower="0.0" upper="0.548" velocity="0.5"/>
+        <dynamics damping="1.0" friction="0.0001"/>
+        <origin rpy="0 0 0" xyz="-0.2383 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}lowerarm_r_yaw_to_${avatar_prefix}lowerarm_r_pitch" type="revolute">
+        <parent link="${avatar_prefix}lowerarm_r_yaw"/>
+        <child link="${avatar_prefix}lowerarm_r_pitch"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}lowerarm_r_pitch_to_${avatar_prefix}lowerarm_r" type="revolute">
+        <parent link="${avatar_prefix}lowerarm_r_pitch"/>
+        <child link="${avatar_prefix}lowerarm_r"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    
+    <joint name="${avatar_prefix}lowerarm_r_to_${avatar_prefix}hand_r" type="continuous">
+        <parent link="${avatar_prefix}lowerarm_r"/>
+        <child link="${avatar_prefix}hand_r_yaw"/>
+        <dynamics damping="1.0" friction="0.0001"/>
+        <origin rpy="-1.2351 0.1883 -0.2033" xyz="-0.22 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}hand_r_yaw_to_${avatar_prefix}hand_r_pitch" type="revolute">
+        <parent link="${avatar_prefix}hand_r_yaw"/>
+        <child link="${avatar_prefix}hand_r_pitch"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}hand_r_pitch_to_${avatar_prefix}hand_r" type="revolute">
+        <parent link="${avatar_prefix}hand_r_pitch"/>
+        <child link="${avatar_prefix}hand_r"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}pelvis_to_${avatar_prefix}thigh_l" type="continuous">
+        <parent link="${avatar_prefix}pelvis"/>
+        <child link="${avatar_prefix}thigh_l"/>
+        <dynamics damping="1.0" friction="0.0001"/>
+        <origin rpy="0 0 0" xyz="-0.03036 0.003211013 -0.0957 "/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}thigh_l_to_${avatar_prefix}calf_l" type="continuous">
+        <parent link="${avatar_prefix}thigh_l"/>
+        <child link="${avatar_prefix}calf_l"/>
+        <dynamics damping="1.0" friction="0.0001"/>
+        <origin rpy="0 0 0" xyz="-0.4024 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}calf_l_to_${avatar_prefix}foot_l" type="continuous">
+        <parent link="${avatar_prefix}calf_l"/>
+        <child link="${avatar_prefix}foot_l"/>
+        <dynamics damping="1.0" friction="0.0001"/>
+        <origin rpy="0 0 0" xyz="-0.3674 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    
+    <joint name="${avatar_prefix}pelvis_to_${avatar_prefix}thigh_r" type="continuous">
+        <parent link="${avatar_prefix}pelvis"/>
+        <child link="${avatar_prefix}thigh_r"/>
+        <dynamics damping="1.0" friction="0.0001"/>
+        <origin rpy="0 0 -3.14159" xyz="-0.03036254 0.00325813 0.09572073"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}thigh_r_to_${avatar_prefix}calf_r" type="continuous">
+        <parent link="${avatar_prefix}thigh_r"/>
+        <child link="${avatar_prefix}calf_r"/>
+        <dynamics damping="1.0" friction="0.0001"/>
+        <origin rpy="0 0 0" xyz="0.40552611 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <joint name="${avatar_prefix}calf_r_to_${avatar_prefix}foot_r" type="continuous">
+        <parent link="${avatar_prefix}calf_r"/>
+        <child link="${avatar_prefix}foot_r"/>
+        <dynamics damping="1.0" friction="0.0001"/>
+        <origin rpy="0 0 0" xyz="0.3674 0 0"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+
+</robot>
+
+

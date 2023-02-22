@@ -10,9 +10,10 @@ Panels:
         - /MarkerArray1/Namespaces1
         - /MarkerArray2
         - /MarkerArray2/Namespaces1
+        - /RobotModel2
         - /RobotModel3
       Splitter Ratio: 0.5829145908355713
-    Tree Height: 608
+    Tree Height: 724
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -59,360 +60,313 @@ Visualization Manager:
     - Alpha: 0.800000011920929
       Class: rviz/RobotModel
       Collision Enabled: true
-      Enabled: true
+      Enabled: false
       Links:
         All Links Enabled: true
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        customer1/calf_l:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        customer1/calf_r:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        customer1/clavicle_l:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/clavicle_r:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/foot_l:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        customer1/foot_r:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        customer1/hand_l:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        customer1/hand_l_pitch:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/hand_l_yaw:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/hand_r:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        customer1/hand_r_pitch:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/hand_r_yaw:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/head:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        customer1/head_pitch:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/head_yaw:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/lowerarm_l:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        customer1/lowerarm_l_pitch:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/lowerarm_l_yaw:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/lowerarm_r:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        customer1/lowerarm_r_pitch:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/lowerarm_r_yaw:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/neck_01:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/neck_02:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/pelvis:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        customer1/pelvis_pitch:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/pelvis_yaw:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/root:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/spine_01:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/spine_02:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/spine_03:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/spine_04:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        customer1/spine_04_pitch:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/spine_04_yaw:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/spine_05:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/thigh_l:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        customer1/thigh_r:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        customer1/upperarm_l:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        customer1/upperarm_l_pitch:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/upperarm_l_yaw:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/upperarm_r:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        customer1/upperarm_r_pitch:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        customer1/upperarm_r_yaw:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
       Update Interval: 0
-      Value: true
+      Value: false
       Visual Enabled: true
     - Class: rviz/TF
       Enabled: true
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        CanonCamera:
+        base_bellow_link:
           Value: true
-        CanonStand:
+        base_footprint:
           Value: true
-        NikonCamera:
+        base_laser_link:
           Value: true
-        NikonStand:
+        base_link:
           Value: true
-        ServiceCounter:
+        calf_l:
           Value: true
-        SonyCamera:
+        calf_r:
           Value: true
-        SonyStand:
+        clavicle_l:
           Value: true
-        customer1/calf_correctiveRoot_l:
+        clavicle_r:
           Value: true
-        customer1/calf_correctiveRoot_r:
+        double_stereo_link:
           Value: true
-        customer1/calf_l:
+        foot_l:
           Value: true
-        customer1/calf_r:
+        foot_r:
           Value: true
-        customer1/clavicle_l:
+        hand_l:
           Value: true
-        customer1/clavicle_r:
+        hand_l_pitch:
           Value: true
-        customer1/foot_l:
+        hand_l_yaw:
           Value: true
-        customer1/foot_r:
+        hand_r:
           Value: true
-        customer1/hand_l:
+        hand_r_pitch:
           Value: true
-        customer1/hand_r:
+        hand_r_yaw:
           Value: true
-        customer1/head:
+        head:
           Value: true
-        customer1/lowerarm_correctiveRoot_l:
+        head_mount_kinect_ir_link:
           Value: true
-        customer1/lowerarm_correctiveRoot_r:
+        head_mount_kinect_ir_optical_frame:
           Value: true
-        customer1/lowerarm_l:
+        head_mount_kinect_rgb_link:
           Value: true
-        customer1/lowerarm_r:
+        head_mount_kinect_rgb_optical_frame:
           Value: true
-        customer1/neck_01:
+        head_mount_link:
           Value: true
-        customer1/neck_02:
+        head_mount_prosilica_link:
           Value: true
-        customer1/pelvis:
+        head_mount_prosilica_optical_frame:
           Value: true
-        customer1/root:
+        head_pitch:
           Value: true
-        customer1/spine_01:
+        head_plate_frame:
           Value: true
-        customer1/spine_02:
+        head_tilt_link:
           Value: true
-        customer1/spine_03:
+        head_yaw:
           Value: true
-        customer1/spine_04:
+        high_def_frame:
           Value: true
-        customer1/spine_04_latissimus_l:
+        high_def_optical_frame:
           Value: true
-        customer1/spine_04_latissimus_r:
+        iai_lab/e_wall_center_left_link:
           Value: true
-        customer1/spine_05:
+        iai_lab/e_wall_center_right_link:
           Value: true
-        customer1/thigh_correctiveRoot_l:
+        iai_lab/e_wall_center_window_link:
           Value: true
-        customer1/thigh_correctiveRoot_r:
+        iai_lab/e_wall_left_link:
           Value: true
-        customer1/thigh_l:
+        iai_lab/e_wall_left_window_link:
           Value: true
-        customer1/thigh_r:
+        iai_lab/e_wall_right_link:
           Value: true
-        customer1/upperarm_correctiveRoot_l:
+        iai_lab/e_wall_right_window_link:
           Value: true
-        customer1/upperarm_correctiveRoot_r:
+        iai_lab/e_window_center_link:
           Value: true
-        customer1/upperarm_l:
+        iai_lab/e_window_left_link:
           Value: true
-        customer1/upperarm_r:
+        iai_lab/e_window_right_link:
+          Value: true
+        iai_lab/large_pillar_1_link:
+          Value: true
+        iai_lab/large_pillar_2_link:
+          Value: true
+        iai_lab/n_l_wall_center_window_link:
+          Value: true
+        iai_lab/n_l_wall_left_link:
+          Value: true
+        iai_lab/n_l_wall_right_link:
+          Value: true
+        iai_lab/n_l_window_center_link:
+          Value: true
+        iai_lab/n_r_wall_center_window_link:
+          Value: true
+        iai_lab/n_r_wall_right_link:
+          Value: true
+        iai_lab/n_r_window_center_link:
+          Value: true
+        iai_lab/partition_wall_shop_link:
+          Value: true
+        iai_lab/partition_wall_work1_link:
+          Value: true
+        iai_lab/room_link:
+          Value: true
+        iai_lab/s_l_wall_door_left_link:
+          Value: true
+        iai_lab/s_l_wall_door_right_link:
+          Value: true
+        iai_lab/s_l_wall_left_link:
+          Value: true
+        iai_lab/s_l_wall_right_link:
+          Value: true
+        iai_lab/s_l_wall_v_left_link:
+          Value: true
+        iai_lab/s_l_wall_v_right_link:
+          Value: true
+        iai_lab/small_pillar_link:
+          Value: true
+        iai_lab/w_wall_center_link:
+          Value: true
+        iai_lab/w_wall_center_window_link:
+          Value: true
+        iai_lab/w_wall_left_link:
+          Value: true
+        iai_lab/w_wall_left_window_link:
+          Value: true
+        iai_lab/w_wall_right_link:
+          Value: true
+        iai_lab/w_wall_right_window_link:
+          Value: true
+        iai_lab/w_window_center_link:
+          Value: true
+        iai_lab/w_window_left_link:
+          Value: true
+        iai_lab/w_window_right_link:
+          Value: true
+        iai_lab/wall_door_left_link:
+          Value: true
+        iai_lab/wall_left_link:
+          Value: true
+        iai_lab/wall_v_link:
+          Value: true
+        imu_link:
+          Value: true
+        l_force_torque_adapter_link:
+          Value: true
+        l_force_torque_link:
+          Value: true
+        l_forearm_cam_frame:
+          Value: true
+        l_forearm_cam_optical_frame:
+          Value: true
+        l_forearm_link:
+          Value: true
+        l_forearm_roll_link:
+          Value: true
+        l_gripper_led_frame:
+          Value: true
+        l_gripper_motor_accelerometer_link:
+          Value: true
+        l_gripper_palm_link:
+          Value: true
+        l_gripper_tool_frame:
+          Value: true
+        l_torso_lift_side_plate_link:
+          Value: true
+        l_upper_arm_link:
+          Value: true
+        l_upper_arm_roll_link:
+          Value: true
+        l_wrist_roll_link:
+          Value: true
+        laser_tilt_link:
+          Value: true
+        laser_tilt_mount_link:
+          Value: true
+        lowerarm_l:
+          Value: true
+        lowerarm_l_pitch:
+          Value: true
+        lowerarm_l_yaw:
+          Value: true
+        lowerarm_r:
+          Value: true
+        lowerarm_r_pitch:
+          Value: true
+        lowerarm_r_yaw:
           Value: true
         map:
           Value: false
-        shop_layout:
+        narrow_stereo_l_stereo_camera_frame:
           Value: true
-        shopkeeper1/calf_correctiveRoot_l:
+        narrow_stereo_l_stereo_camera_optical_frame:
           Value: true
-        shopkeeper1/calf_correctiveRoot_r:
+        narrow_stereo_link:
           Value: true
-        shopkeeper1/calf_l:
+        narrow_stereo_optical_frame:
           Value: true
-        shopkeeper1/calf_r:
+        narrow_stereo_r_stereo_camera_frame:
           Value: true
-        shopkeeper1/clavicle_l:
+        narrow_stereo_r_stereo_camera_optical_frame:
           Value: true
-        shopkeeper1/clavicle_r:
+        neck_01:
           Value: true
-        shopkeeper1/foot_l:
+        neck_02:
           Value: true
-        shopkeeper1/foot_r:
+        pelvis:
           Value: true
-        shopkeeper1/hand_l:
+        pelvis_pitch:
           Value: true
-        shopkeeper1/hand_r:
+        pelvis_yaw:
           Value: true
-        shopkeeper1/head:
+        projector_wg6802418_child_frame:
           Value: true
-        shopkeeper1/lowerarm_correctiveRoot_l:
+        projector_wg6802418_frame:
           Value: true
-        shopkeeper1/lowerarm_correctiveRoot_r:
+        r_forearm_cam_frame:
           Value: true
-        shopkeeper1/lowerarm_l:
+        r_forearm_cam_optical_frame:
           Value: true
-        shopkeeper1/lowerarm_r:
+        r_forearm_link:
           Value: true
-        shopkeeper1/neck_01:
+        r_forearm_roll_link:
           Value: true
-        shopkeeper1/neck_02:
+        r_gripper_led_frame:
           Value: true
-        shopkeeper1/pelvis:
+        r_gripper_motor_accelerometer_link:
           Value: true
-        shopkeeper1/root:
+        r_gripper_palm_link:
           Value: true
-        shopkeeper1/spine_01:
+        r_gripper_tool_frame:
           Value: true
-        shopkeeper1/spine_02:
+        r_torso_lift_side_plate_link:
           Value: true
-        shopkeeper1/spine_03:
+        r_upper_arm_link:
           Value: true
-        shopkeeper1/spine_04:
+        r_upper_arm_roll_link:
           Value: true
-        shopkeeper1/spine_04_latissimus_l:
+        r_wrist_roll_link:
           Value: true
-        shopkeeper1/spine_04_latissimus_r:
+        root:
           Value: true
-        shopkeeper1/spine_05:
+        sensor_mount_link:
           Value: true
-        shopkeeper1/thigh_correctiveRoot_l:
+        spine_01:
           Value: true
-        shopkeeper1/thigh_correctiveRoot_r:
+        spine_02:
           Value: true
-        shopkeeper1/thigh_l:
+        spine_03:
           Value: true
-        shopkeeper1/thigh_r:
+        spine_04:
           Value: true
-        shopkeeper1/upperarm_correctiveRoot_l:
+        spine_04_pitch:
           Value: true
-        shopkeeper1/upperarm_correctiveRoot_r:
+        spine_04_yaw:
           Value: true
-        shopkeeper1/upperarm_l:
+        spine_05:
           Value: true
-        shopkeeper1/upperarm_r:
+        thigh_l:
+          Value: true
+        thigh_r:
+          Value: true
+        torso_lift_link:
+          Value: true
+        upperarm_l:
+          Value: true
+        upperarm_l_pitch:
+          Value: true
+        upperarm_l_yaw:
+          Value: true
+        upperarm_r:
+          Value: true
+        upperarm_r_pitch:
+          Value: true
+        upperarm_r_yaw:
+          Value: true
+        wide_stereo_l_stereo_camera_frame:
+          Value: true
+        wide_stereo_l_stereo_camera_optical_frame:
+          Value: true
+        wide_stereo_link:
+          Value: true
+        wide_stereo_optical_frame:
+          Value: true
+        wide_stereo_r_stereo_camera_frame:
+          Value: true
+        wide_stereo_r_stereo_camera_optical_frame:
           Value: true
       Marker Alpha: 1
       Marker Scale: 0.699999988079071
@@ -421,121 +375,53 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        map:
-          CanonCamera:
-            {}
-          CanonStand:
-            {}
-          NikonCamera:
-            {}
-          NikonStand:
-            {}
-          ServiceCounter:
-            {}
-          SonyCamera:
-            {}
-          SonyStand:
-            {}
-          customer1/calf_correctiveRoot_l:
-            {}
-          customer1/calf_correctiveRoot_r:
-            {}
-          customer1/lowerarm_correctiveRoot_l:
-            {}
-          customer1/lowerarm_correctiveRoot_r:
-            {}
-          customer1/root:
-            customer1/pelvis:
-              customer1/spine_01:
-                customer1/spine_02:
-                  customer1/spine_03:
-                    customer1/spine_04:
-                      customer1/spine_05:
-                        customer1/clavicle_l:
-                          customer1/upperarm_l:
-                            customer1/lowerarm_l:
-                              customer1/hand_l:
-                                {}
-                        customer1/clavicle_r:
-                          customer1/upperarm_r:
-                            customer1/lowerarm_r:
-                              customer1/hand_r:
-                                {}
-                        customer1/neck_01:
-                          customer1/neck_02:
-                            customer1/head:
-                              {}
-                        customer1/spine_04_latissimus_l:
-                          {}
-                        customer1/spine_04_latissimus_r:
-                          {}
-              customer1/thigh_l:
-                customer1/calf_l:
-                  customer1/foot_l:
-                    {}
-              customer1/thigh_r:
-                customer1/calf_r:
-                  customer1/foot_r:
-                    {}
-          customer1/thigh_correctiveRoot_l:
-            {}
-          customer1/thigh_correctiveRoot_r:
-            {}
-          customer1/upperarm_correctiveRoot_l:
-            {}
-          customer1/upperarm_correctiveRoot_r:
-            {}
-          shop_layout:
-            {}
-          shopkeeper1/calf_correctiveRoot_l:
-            {}
-          shopkeeper1/calf_correctiveRoot_r:
-            {}
-          shopkeeper1/lowerarm_correctiveRoot_l:
-            {}
-          shopkeeper1/lowerarm_correctiveRoot_r:
-            {}
-          shopkeeper1/root:
-            shopkeeper1/pelvis:
-              shopkeeper1/spine_01:
-                shopkeeper1/spine_02:
-                  shopkeeper1/spine_03:
-                    shopkeeper1/spine_04:
-                      shopkeeper1/spine_05:
-                        shopkeeper1/clavicle_l:
-                          shopkeeper1/upperarm_l:
-                            shopkeeper1/lowerarm_l:
-                              shopkeeper1/hand_l:
-                                {}
-                        shopkeeper1/clavicle_r:
-                          shopkeeper1/upperarm_r:
-                            shopkeeper1/lowerarm_r:
-                              shopkeeper1/hand_r:
-                                {}
-                        shopkeeper1/neck_01:
-                          shopkeeper1/neck_02:
-                            shopkeeper1/head:
-                              {}
-                        shopkeeper1/spine_04_latissimus_l:
-                          {}
-                        shopkeeper1/spine_04_latissimus_r:
-                          {}
-              shopkeeper1/thigh_l:
-                shopkeeper1/calf_l:
-                  shopkeeper1/foot_l:
-                    {}
-              shopkeeper1/thigh_r:
-                shopkeeper1/calf_r:
-                  shopkeeper1/foot_r:
-                    {}
-          shopkeeper1/thigh_correctiveRoot_l:
-            {}
-          shopkeeper1/thigh_correctiveRoot_r:
-            {}
-          shopkeeper1/upperarm_correctiveRoot_l:
-            {}
-          shopkeeper1/upperarm_correctiveRoot_r:
-            {}
+        root:
+          pelvis_yaw:
+            pelvis_pitch:
+              pelvis:
+                spine_01:
+                  spine_02:
+                    spine_03:
+                      spine_04_yaw:
+                        spine_04_pitch:
+                          spine_04:
+                            spine_05:
+                              clavicle_l:
+                                upperarm_l_yaw:
+                                  upperarm_l_pitch:
+                                    upperarm_l:
+                                      lowerarm_l_yaw:
+                                        lowerarm_l_pitch:
+                                          lowerarm_l:
+                                            hand_l_yaw:
+                                              hand_l_pitch:
+                                                hand_l:
+                                                  {}
+                              clavicle_r:
+                                upperarm_r_yaw:
+                                  upperarm_r_pitch:
+                                    upperarm_r:
+                                      lowerarm_r_yaw:
+                                        lowerarm_r_pitch:
+                                          lowerarm_r:
+                                            hand_r_yaw:
+                                              hand_r_pitch:
+                                                hand_r:
+                                                  {}
+                              neck_01:
+                                neck_02:
+                                  head_yaw:
+                                    head_pitch:
+                                      head:
+                                        {}
+                thigh_l:
+                  calf_l:
+                    foot_l:
+                      {}
+                thigh_r:
+                  calf_r:
+                    foot_r:
+                      {}
       Update Interval: 0
       Value: true
     - Class: rviz/InteractiveMarkers
@@ -582,191 +468,191 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        shopkeeper1/calf_l:
+        calf_l:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        shopkeeper1/calf_r:
+        calf_r:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        shopkeeper1/clavicle_l:
+        clavicle_l:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        shopkeeper1/clavicle_r:
+        clavicle_r:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        shopkeeper1/foot_l:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        shopkeeper1/foot_r:
+        foot_l:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        shopkeeper1/hand_l:
+        foot_r:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        shopkeeper1/hand_l_pitch:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        shopkeeper1/hand_l_yaw:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        shopkeeper1/hand_r:
+        hand_l:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        shopkeeper1/hand_r_pitch:
+        hand_l_pitch:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        shopkeeper1/hand_r_yaw:
+        hand_l_yaw:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        shopkeeper1/head:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        shopkeeper1/head_pitch:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        shopkeeper1/head_yaw:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        shopkeeper1/lowerarm_l:
+        hand_r:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        shopkeeper1/lowerarm_l_pitch:
+        hand_r_pitch:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        shopkeeper1/lowerarm_l_yaw:
+        hand_r_yaw:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        shopkeeper1/lowerarm_r:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        shopkeeper1/lowerarm_r_pitch:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        shopkeeper1/lowerarm_r_yaw:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        shopkeeper1/neck_01:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        shopkeeper1/neck_02:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        shopkeeper1/pelvis:
+        head:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        shopkeeper1/pelvis_pitch:
+        head_pitch:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        shopkeeper1/pelvis_yaw:
+        head_yaw:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        shopkeeper1/root:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        shopkeeper1/spine_01:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        shopkeeper1/spine_02:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        shopkeeper1/spine_03:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        shopkeeper1/spine_04:
+        lowerarm_l:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        shopkeeper1/spine_04_pitch:
+        lowerarm_l_pitch:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        shopkeeper1/spine_04_yaw:
+        lowerarm_l_yaw:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        shopkeeper1/spine_05:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        shopkeeper1/thigh_l:
+        lowerarm_r:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        shopkeeper1/thigh_r:
+        lowerarm_r_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        lowerarm_r_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        neck_01:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        neck_02:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pelvis:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        shopkeeper1/upperarm_l:
+        pelvis_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pelvis_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        root:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        spine_01:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        spine_02:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        spine_03:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        spine_04:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        shopkeeper1/upperarm_l_pitch:
+        spine_04_pitch:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        shopkeeper1/upperarm_l_yaw:
+        spine_04_yaw:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        shopkeeper1/upperarm_r:
+        spine_05:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        thigh_l:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        shopkeeper1/upperarm_r_pitch:
+        thigh_r:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        shopkeeper1/upperarm_r_yaw:
+          Value: true
+        upperarm_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        upperarm_l_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        upperarm_l_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        upperarm_r:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        upperarm_r_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        upperarm_r_yaw:
           Alpha: 1
           Show Axes: false
           Show Trail: false
       Name: RobotModel
-      Robot Description: robot_description2
+      Robot Description: avatar_description
       TF Prefix: ""
       Update Interval: 0
       Value: true
@@ -774,64 +660,24 @@ Visualization Manager:
     - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
-      Enabled: true
+      Enabled: false
       Links:
         All Links Enabled: true
-        CanonCamera:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        CanonStand:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        NikonCamera:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        NikonStand:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        ServiceCounter:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        SonyCamera:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        SonyStand:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        shop_layout:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: RobotModel
-      Robot Description: shop_description
+      Robot Description: kitchen_description
       TF Prefix: ""
       Update Interval: 0
-      Value: true
+      Value: false
       Visual Enabled: true
   Enabled: true
   Global Options:
     Background Color: 136; 138; 133
     Default Light: true
-    Fixed Frame: map
+    Fixed Frame: root
     Frame Rate: 10
   Name: root
   Tools:
@@ -855,7 +701,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 22.178083419799805
+      Distance: 10.885313034057617
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -871,9 +717,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.9847965240478516
+      Pitch: 0.32979661226272583
       Target Frame: <Fixed Frame>
-      Yaw: 3.1385550498962402
+      Yaw: 0.47537702322006226
     Saved:
       - Class: rviz/XYOrbit
         Distance: 6.25242280960083
@@ -897,11 +743,11 @@ Visualization Manager:
         Yaw: 0.3253966271877289
 Window Geometry:
   Displays:
-    collapsed: true
-  Height: 900
-  Hide Left Dock: true
+    collapsed: false
+  Height: 1016
+  Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000025d000002ebfc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073000000003d000002eb000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f000002ebfc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d000002eb000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000075600000039fc0100000002fb0000000800540069006d0065010000000000000756000003bc00fffffffb0000000800540069006d0065010000000000000450000000000000000000000641000002eb00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000004000000000000026b0000035ffc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d0000035f000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f0000035ffc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d0000035f000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000073800000039fc0100000002fb0000000800540069006d0065010000000000000738000003bc00fffffffb0000000800540069006d00650100000000000004500000000000000000000003b20000035f00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -910,6 +756,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: false
-  Width: 1878
-  X: 42
+  Width: 1848
+  X: 72
   Y: 27
