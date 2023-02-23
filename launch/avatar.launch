@@ -6,8 +6,16 @@
     <arg name="model_ue" default="$(find iai_avatar_description)/avatars/MetaHuman/urdf/avatar_unrealengine.urdf.xacro"/>
     
     
-    <!-- param name="robot_description_bw" 
-    command="$(find xacro)/xacro inorder $(arg model_bw) prefix:=$(arg avatar_prefix)"/ -->
+    <param name="avatar_description" 
+    command="$(find xacro)/xacro --inorder $(arg model_ue) prefix:=$(arg avatar_prefix)"/>
+    
+      <node name="avatar_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" >
+    <remap from="robot_description" to="avatar_description"/>
+    <param name="tf_prefix" value=""/>
+    <param name="publish_frequency" value="25"/>
+    <param name="ignore_timestamp" value="true"/>
+  </node>
+
     
     <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model_bw) prefix:=$(arg avatar_prefix)"/>
    
@@ -51,7 +59,7 @@
   
 
   <!-- node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /-->
- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+ <!-- node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" /-->
 
     <!-- rosparam command="load" file="$(find iai_avatar_ros_config)/config/ros_control_sim.yaml"/-->
  <!-- node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" /-->

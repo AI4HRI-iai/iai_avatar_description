@@ -5,6 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
+        - /RobotModel1
         - /TF1/Frames1
         - /TF1/Tree1
         - /MarkerArray1/Namespaces1
@@ -60,45 +61,282 @@ Visualization Manager:
     - Alpha: 0.800000011920929
       Class: rviz/RobotModel
       Collision Enabled: true
-      Enabled: false
+      Enabled: true
       Links:
         All Links Enabled: true
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        calf_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        calf_l_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        calf_l_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        calf_r:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        calf_r_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        calf_r_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        clavicle_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        clavicle_r:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        foot_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        foot_l_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        foot_l_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        foot_r:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        foot_r_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        foot_r_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        hand_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hand_l_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        hand_l_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        hand_r:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hand_r_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        hand_r_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        head:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        head_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        head_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        lowerarm_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        lowerarm_l_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        lowerarm_l_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        lowerarm_r:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        lowerarm_r_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        lowerarm_r_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        neck_01:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        neck_02:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pelvis:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pelvis_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pelvis_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        root:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        spine_01:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        spine_02:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        spine_03:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        spine_04:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        spine_04_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        spine_04_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        spine_05:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        thigh_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thigh_l_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        thigh_l_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        thigh_r:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thigh_r_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        thigh_r_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        upperarm_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        upperarm_l_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        upperarm_l_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        upperarm_r:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        upperarm_r_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        upperarm_r_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
       Name: RobotModel
-      Robot Description: robot_description
+      Robot Description: avatar_description
       TF Prefix: ""
       Update Interval: 0
-      Value: false
+      Value: true
       Visual Enabled: true
     - Class: rviz/TF
       Enabled: true
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        base_bellow_link:
-          Value: true
-        base_footprint:
-          Value: true
-        base_laser_link:
-          Value: true
-        base_link:
-          Value: true
         calf_l:
           Value: true
+        calf_l_pitch:
+          Value: true
+        calf_l_yaw:
+          Value: true
         calf_r:
+          Value: true
+        calf_r_pitch:
+          Value: true
+        calf_r_yaw:
           Value: true
         clavicle_l:
           Value: true
         clavicle_r:
           Value: true
-        double_stereo_link:
-          Value: true
         foot_l:
           Value: true
+        foot_l_pitch:
+          Value: true
+        foot_l_yaw:
+          Value: true
         foot_r:
+          Value: true
+        foot_r_pitch:
+          Value: true
+        foot_r_yaw:
           Value: true
         hand_l:
           Value: true
@@ -114,31 +352,9 @@ Visualization Manager:
           Value: true
         head:
           Value: true
-        head_mount_kinect_ir_link:
-          Value: true
-        head_mount_kinect_ir_optical_frame:
-          Value: true
-        head_mount_kinect_rgb_link:
-          Value: true
-        head_mount_kinect_rgb_optical_frame:
-          Value: true
-        head_mount_link:
-          Value: true
-        head_mount_prosilica_link:
-          Value: true
-        head_mount_prosilica_optical_frame:
-          Value: true
         head_pitch:
           Value: true
-        head_plate_frame:
-          Value: true
-        head_tilt_link:
-          Value: true
         head_yaw:
-          Value: true
-        high_def_frame:
-          Value: true
-        high_def_optical_frame:
           Value: true
         iai_lab/e_wall_center_left_link:
           Value: true
@@ -222,40 +438,6 @@ Visualization Manager:
           Value: true
         iai_lab/wall_v_link:
           Value: true
-        imu_link:
-          Value: true
-        l_force_torque_adapter_link:
-          Value: true
-        l_force_torque_link:
-          Value: true
-        l_forearm_cam_frame:
-          Value: true
-        l_forearm_cam_optical_frame:
-          Value: true
-        l_forearm_link:
-          Value: true
-        l_forearm_roll_link:
-          Value: true
-        l_gripper_led_frame:
-          Value: true
-        l_gripper_motor_accelerometer_link:
-          Value: true
-        l_gripper_palm_link:
-          Value: true
-        l_gripper_tool_frame:
-          Value: true
-        l_torso_lift_side_plate_link:
-          Value: true
-        l_upper_arm_link:
-          Value: true
-        l_upper_arm_roll_link:
-          Value: true
-        l_wrist_roll_link:
-          Value: true
-        laser_tilt_link:
-          Value: true
-        laser_tilt_mount_link:
-          Value: true
         lowerarm_l:
           Value: true
         lowerarm_l_pitch:
@@ -270,18 +452,6 @@ Visualization Manager:
           Value: true
         map:
           Value: false
-        narrow_stereo_l_stereo_camera_frame:
-          Value: true
-        narrow_stereo_l_stereo_camera_optical_frame:
-          Value: true
-        narrow_stereo_link:
-          Value: true
-        narrow_stereo_optical_frame:
-          Value: true
-        narrow_stereo_r_stereo_camera_frame:
-          Value: true
-        narrow_stereo_r_stereo_camera_optical_frame:
-          Value: true
         neck_01:
           Value: true
         neck_02:
@@ -292,37 +462,7 @@ Visualization Manager:
           Value: true
         pelvis_yaw:
           Value: true
-        projector_wg6802418_child_frame:
-          Value: true
-        projector_wg6802418_frame:
-          Value: true
-        r_forearm_cam_frame:
-          Value: true
-        r_forearm_cam_optical_frame:
-          Value: true
-        r_forearm_link:
-          Value: true
-        r_forearm_roll_link:
-          Value: true
-        r_gripper_led_frame:
-          Value: true
-        r_gripper_motor_accelerometer_link:
-          Value: true
-        r_gripper_palm_link:
-          Value: true
-        r_gripper_tool_frame:
-          Value: true
-        r_torso_lift_side_plate_link:
-          Value: true
-        r_upper_arm_link:
-          Value: true
-        r_upper_arm_roll_link:
-          Value: true
-        r_wrist_roll_link:
-          Value: true
         root:
-          Value: true
-        sensor_mount_link:
           Value: true
         spine_01:
           Value: true
@@ -340,9 +480,15 @@ Visualization Manager:
           Value: true
         thigh_l:
           Value: true
+        thigh_l_pitch:
+          Value: true
+        thigh_l_yaw:
+          Value: true
         thigh_r:
           Value: true
-        torso_lift_link:
+        thigh_r_pitch:
+          Value: true
+        thigh_r_yaw:
           Value: true
         upperarm_l:
           Value: true
@@ -355,18 +501,6 @@ Visualization Manager:
         upperarm_r_pitch:
           Value: true
         upperarm_r_yaw:
-          Value: true
-        wide_stereo_l_stereo_camera_frame:
-          Value: true
-        wide_stereo_l_stereo_camera_optical_frame:
-          Value: true
-        wide_stereo_link:
-          Value: true
-        wide_stereo_optical_frame:
-          Value: true
-        wide_stereo_r_stereo_camera_frame:
-          Value: true
-        wide_stereo_r_stereo_camera_optical_frame:
           Value: true
       Marker Alpha: 1
       Marker Scale: 0.699999988079071
@@ -414,14 +548,26 @@ Visualization Manager:
                                     head_pitch:
                                       head:
                                         {}
-                thigh_l:
-                  calf_l:
-                    foot_l:
-                      {}
-                thigh_r:
-                  calf_r:
-                    foot_r:
-                      {}
+                thigh_l_yaw:
+                  thigh_l_pitch:
+                    thigh_l:
+                      calf_l_yaw:
+                        calf_l_pitch:
+                          calf_l:
+                            foot_l_yaw:
+                              foot_l_pitch:
+                                foot_l:
+                                  {}
+                thigh_r_yaw:
+                  thigh_r_pitch:
+                    thigh_r:
+                      calf_r_yaw:
+                        calf_r_pitch:
+                          calf_r:
+                            foot_r_yaw:
+                              foot_r_pitch:
+                                foot_r:
+                                  {}
       Update Interval: 0
       Value: true
     - Class: rviz/InteractiveMarkers
@@ -473,11 +619,27 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        calf_l_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        calf_l_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         calf_r:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
+        calf_r_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        calf_r_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         clavicle_l:
           Alpha: 1
           Show Axes: false
@@ -491,11 +653,27 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        foot_l_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        foot_l_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         foot_r:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
+        foot_r_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        foot_r_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         hand_l:
           Alpha: 1
           Show Axes: false
@@ -620,11 +798,27 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        thigh_l_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        thigh_l_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         thigh_r:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
+        thigh_r_pitch:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        thigh_r_yaw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         upperarm_l:
           Alpha: 1
           Show Axes: false
@@ -652,7 +846,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
       Name: RobotModel
-      Robot Description: avatar_description
+      Robot Description: robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: true
@@ -717,9 +911,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.32979661226272583
+      Pitch: 0.5947964191436768
       Target Frame: <Fixed Frame>
-      Yaw: 0.47537702322006226
+      Yaw: 0.41037699580192566
     Saved:
       - Class: rviz/XYOrbit
         Distance: 6.25242280960083
