@@ -6,4 +6,4 @@ This package contains the kinematic and visual description of an human avatar ba
 
 ## Launching
 
-launch `roslaunch iai_avatar_description avatar.launch`
+launch `roslaunch iai_avatar_description world.launch`
