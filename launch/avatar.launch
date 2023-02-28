@@ -17,7 +17,7 @@
   </node>
 
     
-    <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model_bw) prefix:=$(arg avatar_prefix)"/>
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model_ue) prefix:=$(arg avatar_prefix)"/>
    
 
        <!-- arg name="model1" default="$(find iai_avatar_description)/avatars/MetaHuman/urdf/avatar.urdf.xacro"/>

@@ -65,6 +65,7 @@
     <link name="${avatar_prefix}spine_01">
         <xacro:default_inertial mass="2.34"/>
     </link>
+    
 
     <link name="${avatar_prefix}spine_02">
         <xacro:default_inertial mass="3.34"/>
@@ -251,7 +252,7 @@
         <child link="${avatar_prefix}spine_04_yaw"/>
         <limit effort="1" lower="0" upper="0" velocity="1"/>
         <origin rpy="0 0 0" xyz="0.07891 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="0 0 1"/>
     </joint>
     
     <joint name="${avatar_prefix}spine_04_yaw_to_${avatar_prefix}spine_04_pitch" type="revolute">
@@ -303,7 +304,7 @@
         <dynamics damping="1.0" friction="0.0001"/>
         <limit effort="1" lower="-0.610865" upper="0.610865" velocity="1"/>
         <origin rpy="0 0 0" xyz="0.05279524 0 0"/>
-        <axis xyz="0 1 0"/>
+        <axis xyz="0 0 1"/>
     </joint>
 
     <joint name="${avatar_prefix}head_yaw_to_${avatar_prefix}head_pitch" type="revolute">
@@ -361,7 +362,7 @@
         <child link="${avatar_prefix}lowerarm_l_yaw"/>
         <origin rpy="0 0 0" xyz="0.238537997 0 0"/>
         <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="0 0 1"/>
     </joint>
 
     <joint name="${avatar_prefix}lowerarm_l_yaw_to_${avatar_prefix}lowerarm_l_pitch" type="revolute">
@@ -386,7 +387,7 @@
         <dynamics damping="1.0" friction="0.0001"/>
         <limit effort="1" lower="0" upper="0" velocity="1"/>
         <origin rpy="-1.2351 0.1883 -0.2033" xyz="0.22966 0 -0.0000001"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="0 0 1"/>
     </joint>
 
     <joint name="${avatar_prefix}hand_l_yaw_to_${avatar_prefix}hand_l_pitch" type="revolute">
@@ -420,7 +421,7 @@
         <dynamics damping="1.0" friction="0.0001"/>
         <limit effort="1" lower="0" upper="0" velocity="1"/>
         <origin rpy="0 1.0471975511965976 0" xyz="-0.13340 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="0 0 1"/>
     </joint>
 
     <joint name="${avatar_prefix}upperarm_r_yaw_to_${avatar_prefix}upperarm_r_pitch" type="revolute">
@@ -446,7 +447,7 @@
         <limit effort="1000.0" lower="0.0" upper="0.548" velocity="0.5"/>
         <dynamics damping="1.0" friction="0.0001"/>
         <origin rpy="0 0 0" xyz="-0.2383 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="0 0 1"/>
     </joint>
 
     <joint name="${avatar_prefix}lowerarm_r_yaw_to_${avatar_prefix}lowerarm_r_pitch" type="revolute">
@@ -471,7 +472,7 @@
         <dynamics damping="1.0" friction="0.0001"/>
         <limit effort="1" lower="0" upper="0" velocity="1"/>
         <origin rpy="-1.2351 0.1883 -0.2033" xyz="-0.22 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="0 0 1"/>
     </joint>
 
     <joint name="${avatar_prefix}hand_r_yaw_to_${avatar_prefix}hand_r_pitch" type="revolute">
@@ -494,15 +495,15 @@
         <parent link="${avatar_prefix}pelvis"/>
         <child link="${avatar_prefix}thigh_l_yaw"/>
         <dynamics damping="1.0" friction="0.0001"/>
-        <limit effort="1" lower="0" upper="0" velocity="1"/>
+        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
         <origin rpy="0 0 0" xyz="-0.03036 0.003211013 -0.0957 "/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="0 0 1"/>
     </joint>
 
      <joint name="${avatar_prefix}thigh_l_yaw_to_${avatar_prefix}thigh_l_pitch" type="revolute">
         <parent link="${avatar_prefix}thigh_l_yaw"/>
         <child link="${avatar_prefix}thigh_l_pitch"/>
-        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <limit effort="1" lower="-0.52" upper="0.87" velocity="1"/>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <axis xyz="0 1 0"/>
     </joint>
@@ -515,12 +516,12 @@
         <axis xyz="1 0 0"/>
     </joint>
 
-
+     <!-- left knee extension/flexion-->
     <joint name="${avatar_prefix}thigh_l_to_${avatar_prefix}calf_l_yaw" type="revolute">
         <parent link="${avatar_prefix}thigh_l"/>
         <child link="${avatar_prefix}calf_l_yaw"/>
         <dynamics damping="1.0" friction="0.0001"/>
-        <limit effort="1" lower="0" upper="0" velocity="1"/>
+        <limit effort="1" lower="0" upper="2.61799" velocity="1"/>
         <origin rpy="0 0 0" xyz="-0.4024 0 0"/>
         <axis xyz="1 0 0"/>
     </joint>
@@ -528,7 +529,7 @@
      <joint name="${avatar_prefix}calf_l_yaw_to_${avatar_prefix}calf_l_pitch" type="revolute">
         <parent link="${avatar_prefix}calf_l_yaw"/>
         <child link="${avatar_prefix}calf_l_pitch"/>
-        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <limit effort="1" lower="0" upper="0" velocity="1"/>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <axis xyz="0 1 0"/>
     </joint>
@@ -536,7 +537,7 @@
     <joint name="${avatar_prefix}calf_l_pitch_to_${avatar_prefix}calf_l" type="revolute">
         <parent link="${avatar_prefix}calf_l_pitch"/>
         <child link="${avatar_prefix}calf_l"/>
-        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <limit effort="1" lower="0" upper="0" velocity="1"/>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <axis xyz="1 0 0"/>
     </joint>
@@ -548,7 +549,7 @@
         <dynamics damping="1.0" friction="0.0001"/>
         <limit effort="1" lower="0" upper="0" velocity="1"/>
         <origin rpy="0 0 0" xyz="-0.3674 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="0 0 1"/>
     </joint>
 
      <joint name="${avatar_prefix}foot_l_yaw_to_${avatar_prefix}foot_l_pitch" type="revolute">
@@ -573,13 +574,13 @@
         <dynamics damping="1.0" friction="0.0001"/>
         <limit effort="1" lower="0" upper="0" velocity="1"/>
         <origin rpy="0 0 -3.14159" xyz="-0.03036254 0.00325813 0.09572073"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="0 0 1"/>
     </joint>
 
      <joint name="${avatar_prefix}thigh_r_yaw_to_${avatar_prefix}thigh_r_pitch" type="revolute">
         <parent link="${avatar_prefix}thigh_r_yaw"/>
         <child link="${avatar_prefix}thigh_r_pitch"/>
-        <limit effort="1" lower="-1.5708" upper="2.44346" velocity="1"/>
+        <limit effort="1" lower="-0.52" upper="0.87" velocity="1"/>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <axis xyz="0 1 0"/>
     </joint>
@@ -598,7 +599,7 @@
         <dynamics damping="1.0" friction="0.0001"/>
         <limit effort="1" lower="0" upper="0" velocity="1"/>
         <origin rpy="0 0 0" xyz="0.40552611 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="0 0 1"/>
     </joint>
     
     <joint name="${avatar_prefix}calf_r_yaw_to_${avatar_prefix}calf_r_pitch" type="revolute">
@@ -623,7 +624,7 @@
         <dynamics damping="1.0" friction="0.0001"/>
         <limit effort="1" lower="0" upper="0" velocity="1"/>
         <origin rpy="0 0 0" xyz="0.3674 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="0 0 1"/>
     </joint>
 
     <joint name="${avatar_prefix}foot_r_yaw_to_${avatar_prefix}foot_r_pitch" type="revolute">
