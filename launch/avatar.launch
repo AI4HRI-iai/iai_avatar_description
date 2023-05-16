@@ -4,10 +4,11 @@
     
     <arg name="model_bw" default="$(find iai_avatar_description)/avatars/MetaHuman/urdf/avatar_bulletworld.urdf.xacro"/>
     <arg name="model_ue" default="$(find iai_avatar_description)/avatars/MetaHuman/urdf/avatar_unrealengine.urdf.xacro"/>
+    <arg name="model_sj" default="$(find iai_avatar_description)/avatars/MetaHuman/urdf/avatar_singlejoint.urdf"/>
     
     
     <param name="avatar_description" 
-    command="$(find xacro)/xacro --inorder $(arg model_ue) prefix:=$(arg avatar_prefix)"/>
+    command="$(find xacro)/xacro --inorder $(arg model_sj) prefix:=$(arg avatar_prefix)"/>
     
       <node name="avatar_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" >
     <remap from="robot_description" to="avatar_description"/>
