@@ -198,7 +198,6 @@
 
     <xacro:yaw_pitch_joints linkname="foot_r" mass="1.12"/>
 
-
     <joint name="${avatar_prefix}root_to_${avatar_prefix}pelvis_yaw" type="fixed">
         <parent link="${avatar_prefix}root"/>
         <child link="${avatar_prefix}pelvis_yaw"/>
@@ -643,7 +642,13 @@
         <axis xyz="1 0 0"/>
     </joint>
 
+    <!-- "Camera to see relative to root -->
+
+     <link name="Camera_frame_avatar"/>
+  <joint name="Camera_frame_avatar_fixedjoint" type="fixed">
+    <parent link="root"/>
+    <child link="Camera_frame_avatar"/>
+    <origin rpy="-1.57079632679 0 -1.57079632679" xyz="0.05138 0.039 1.4194"/>
+  </joint>
 
 </robot>
-
-
