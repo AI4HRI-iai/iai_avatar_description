@@ -7,18 +7,18 @@
     <arg name="model_sj" default="$(find iai_avatar_description)/avatars/MetaHuman/urdf/avatar_singlejoint.urdf"/>
     
     
-    <param name="avatar_description" 
-    command="$(find xacro)/xacro --inorder $(arg model_sj) prefix:=$(arg avatar_prefix)"/>
+    <param name="robot_description" 
+    command="$(find xacro)/xacro --inorder $(arg model_ue) prefix:=$(arg avatar_prefix)"/>
     
-      <node name="avatar_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" >
+   <!--    <node name="avatar_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" >
     <remap from="robot_description" to="avatar_description"/>
     <param name="tf_prefix" value=""/>
     <param name="publish_frequency" value="25"/>
     <param name="ignore_timestamp" value="true"/>
-  </node>
+  </node> -->
 
     
-    <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model_ue) prefix:=$(arg avatar_prefix)"/>
+ <!--    <param name="robot_description" command="$(find xacro)/xacro inorder $(arg model_ue) prefix:=$(arg avatar_prefix)"/> -->
    
 
        <!-- arg name="model1" default="$(find iai_avatar_description)/avatars/MetaHuman/urdf/avatar.urdf.xacro"/>
@@ -35,67 +35,71 @@
         name="iai_kitchen_room_link_broadcaster" 
         args="0.0 0.0 0. 0.0 0. 0. map iai_kitchen/world 25">
   </node -->
-    <!--node name="avatar_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" >
-    <remap from="robot_description" to="avatar_description"/>
-    <param name="tf_prefix" value=""/>
-    <param name="publish_frequency" value="25"/>
-    <param name="ignore_timestamp" value="true"/>
-  </node -->
+ 
 
 
-  <!--node pkg="joint_state_publisher" type="joint_state_publisher"
+<!--   <node pkg="joint_state_publisher" type="joint_state_publisher"
         name="avatar_joint_state_publisher" output="screen">
     <remap from="robot_description" to="avatar_description"/>
     <param name="rate" value="25"/>
     <remap from="/joint_states" to="/avatar/joint_states" />
-  </node --> 
-
+</node> 
+ -->
 
 
    
 
-    <!-- node name="rviz" pkg="rviz" type="rviz" args="-d $(find iai_avatar_description)/launch/rviz/config.rviz"
-          required="true"/ -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find iai_avatar_description)/launch/rviz/config.rviz"
+          required="true"/>
           
   
 
-  <!-- node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /-->
- <!-- node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" /-->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+ <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
     <!-- rosparam command="load" file="$(find iai_avatar_ros_config)/config/ros_control_sim.yaml"/-->
  <!-- node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" /-->
     
-     <!-- node pkg="robot_state_publisher" type="robot_state_publisher"
+  <!--    <node pkg="robot_state_publisher" type="robot_state_publisher"
     name="robot_state_publisher" output="screen">
-    < remap from="/joint_states" to="/avatar/joint_states" />
-    < param name="publish_frequency" value="25"/>
-    < param name="ignore_timestamp" value="true">
-    < param name="use_tf_static" value="true"> 
-  </node -->
+    <remap from="/joint_states" to="/avatar/joint_states" />
+    <param name="publish_frequency" value="25"/>
+    <param name="ignore_timestamp" value="true"/>
+    <param name="use_tf_static" value="true"/> 
+  </node> -->
  
-  <!-- node pkg="tf"
+  <!-- <node pkg="tf"
         type="static_transform_publisher"
         name="iai_kitchen_room_link_broadcaster" 
         args="0.0 0.0 0. 0.0 0. 0. map root 25">
-  </node -->
+  </node> -->
 
-  <!-- node pkg="joint_state_publisher" type="joint_state_publisher"
+  <!-- <node pkg="joint_state_publisher" type="joint_state_publisher"
         name="kitchen_joint_state_publisher" output="screen">
     <param name="rate" value="25"/>
     <remap from="/joint_states" to="/avatar/joint_states" />
     <rosparam param="source_list">
       - /joint_states
     </rosparam>
-  </node -->
+  </node> -->
   
-   <arg name="use_gui" default="true"/>
-    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" output="screen"
-          unless="$(arg use_gui)"/>
+    <arg name="use_gui" default="true"/>
+
     <node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher_gui"
           output="screen" if="$(arg use_gui)"/>
-
+ 
   
+          <node pkg="giskardpy" type="giskard.py" name="giskard" output="screen">
+            <param name="config" value="Avatar_StandAlone"/>
+          </node>
+        
+          <node pkg="giskardpy" type="interactive_marker.py" name="giskard_interactive_marker" output="screen">
+            <rosparam param="enable_self_collision">False</rosparam>
+            <rosparam param="interactive_marker_chains">
+              - [odom_combined, avatar/root]
+              - [odom_combined , avatar/hand_l]
 
+            </rosparam>
+          </node>
 
 </launch>
-
