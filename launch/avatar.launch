@@ -98,7 +98,6 @@
             <rosparam param="interactive_marker_chains">
               - [odom_combined, avatar/root]
               - [odom_combined , avatar/hand_l]
-
             </rosparam>
           </node>
 
